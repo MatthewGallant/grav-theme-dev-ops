@@ -1,0 +1,3 @@
+enabled: true
+navbar_text: "> cd /devops/"
+footer_text: "Powered by <a href='https://github.com/MatthewGallant/grav-theme-dev-ops' target='_blank' rel='noopenner noreferrer'>Awesome Open Source Software</a>."

@@ -1,0 +1,399 @@
+/* =========================================================================== *\
+    Custom styles for the DevOps theme
+\* =========================================================================== */
+
+/* ------------------------------------ *\
+    Base styles for all pages
+\* ------------------------------------ */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1A1D21;
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #3D5AFE;
+}
+
+img {
+    width: 100%;
+}
+
+/* ------------------------------------ *\
+    NavBar
+\* ------------------------------------ */
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.NavBar__dark {
+    align-items: unset;
+    max-width: unset;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100% !important;
+}
+
+.NavBar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.NavBar ul {
+    list-style: none;
+}
+
+.NavBar li {
+    display: inline;
+    padding-right: 10px;
+}
+
+.NavBar li:last-child {
+    padding-right: 0;
+}
+
+.NavBar li.selected {
+    font-weight: 700;
+}
+
+.NavBarLogo {
+    font-family: 'Roboto Mono', monospace !important;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+}
+
+.NavBarLogo_text {
+    margin-right: 5px;
+}
+
+.NavBarLogo_cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.125rem;
+    background: #ffffff;
+    margin-left: 5px;
+    margin-top: 2px;
+    border-radius: 1px;
+    animation: cursor 1s infinite;
+}
+
+.NavBar_navButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.NavBarNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.NavBar__dark .NavBarLogo_text {
+    padding-left: 50px;
+}
+
+.NavBar__dark ul {
+    padding-right: 50px;
+    margin: 0;
+}
+
+@media (max-width: 1023px) {
+    .NavBar__dark ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+        padding: 0;
+    }
+
+    .NavBarLogo {
+        padding: 20px 0;
+    }
+
+    .NavBar_navContainer {
+        position: relative;
+    }
+
+    .NavBarNav {
+        position: absolute;
+        top: 0;
+        background: #000000;
+        justify-content: unset;
+        width: 100%;
+        display: none;
+    }
+
+    .NavBar li {
+        border-bottom: 1px solid #444753;
+    }
+
+    .NavBar li:last-child {
+        border-bottom: none;
+    }
+
+    .NavBar li,
+    .NavBar li:last-child {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .NavBar li a {
+        display: block;
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .NavBar {
+        padding: 20px;
+    }
+
+    .NavBar_navButton {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
+    .NavBar {
+        width: 75%;
+    }
+}
+
+/* ------------------------------------ *\
+    Footer
+\* ------------------------------------ */
+
+.Footer {
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.Footer a {
+    text-decoration: none;
+}
+
+.Footer__dark {
+    background-color: #000000;
+}
+
+@media (max-width: 1024px) {
+    .Footer {
+        background-color: #000000;
+    }
+}
+
+/* ------------------------------------ *\
+    Blog
+\* ------------------------------------ */
+
+.BlogPost img {
+    border-radius: 10px;
+}
+
+.BlogPost_title {
+    text-align: center;
+}
+
+.BlogPostCard {
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.BlogPostCard_title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.BlogPostCard_link a {
+    text-decoration: none;
+}
+
+/* ------------------------------------ *\
+    Profile modular page
+\* ------------------------------------ */
+
+.ProfileModule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ProfileModule_container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.ProfileModule_image {
+    display: block;
+    padding-bottom: 100%;
+    position: relative;
+}
+
+.ProfileModule_image > img {
+    height: 100%;
+    image-orientation: none;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.ProfileModule_name {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+.ProfileModule_quip {
+    margin-top: 20px;
+}
+
+.ProfileModule_socials {
+    margin-top: 20px;
+}
+
+.ProfileModule_socialLink {
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.ProfileModule_socialLink:last-child {
+    padding-right: 0;
+}
+
+.ProfileModule_socialIcon {
+    filter: invert(1);
+    width: 40px;
+}
+
+/* ------------------------------------ *\
+    Utilities
+\* ------------------------------------ */
+
+.Container {
+    flex: 1 0 auto;
+    width: 90%;
+}
+
+.Container__slim {
+    max-width: 1280px;
+}
+
+.Container__stretch {
+    justify-content: stretch;
+    display: flex;
+}
+
+.Column {
+    display: flex;
+    flex-direction: column;
+}
+
+.Blur {
+    filter: blur(4px);
+}
+
+.Show {
+    display: block;
+}
+
+.Body__light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ------------------------------------ *\
+    CSS Animations
+\* ------------------------------------ */
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ------------------------------------ *\
+    Pure CSS Overrides
+\* ------------------------------------ */
+
+.pure-g [class *= "pure-u"] {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* ------------------------------------ *\
+    Hamburger CSS Overrides
+\* ------------------------------------ */
+
+.hamburger {
+    padding-right: 50px !important;
+    display: flex !important;
+    align-items: center;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+    height: 2px !important;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+    background-color: #fff !important;
+}
+
+/* ------------------------------------ *\
+    Pagination CSS Overrides
+\* ------------------------------------ */
+
+.pagination {
+    margin: 20px 0 0 !important;
+}
+
+.pagination li {
+    border: none !important;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.pagination a,
+.pagination span {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 20px !important;
+}

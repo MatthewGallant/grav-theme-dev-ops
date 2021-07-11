@@ -1,0 +1,50 @@
+name: DevOps
+slug: dev-ops
+type: theme
+version: 1.0.0
+description: An elegant developer-inspired dark theme for Grav.
+icon: code
+author:
+  name: Matthew Gallant
+  email: matt@matthewgallant.me
+homepage: https://github.com/MatthewGallant/grav-theme-dev-ops
+demo: https://matthewgallant.me
+keywords: grav, theme, etc
+bugs: https://github.com/MatthewGallant/grav-theme-dev-ops/issues
+readme: https://github.com/MatthewGallant/grav-theme-dev-ops/blob/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    navbar_text:
+      type: text
+      label: NavBar Text
+      help: The text that is displayed before the blinking cursor
+      size: medium
+      default: '> cd/devops/'
+    footer_text:
+      type: text
+      label: Footer Text
+      help: The text that is displayed in the footer
+      size: medium
+      default: 'Powered by Grav & DevOps'
+    favicon_upload:
+      type: file
+      label: Upload favicons
+      help: Upload favicon icons for the site
+      multiple: true
+      destination: 'theme://favicons'
+      accept:
+      - image/*
+      - .xml
+      - .webmanifest
+    favicon_code:
+      type: textarea
+      autofocus: true
+      label: Favicon code
+      help: The block of code responsible for rendering the favicons
+      rows: 10

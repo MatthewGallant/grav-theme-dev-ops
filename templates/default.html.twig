@@ -1,0 +1,16 @@
+
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+    {% include "partials/navbar.html.twig" %}
+{% endblock %}
+
+{% block content %}
+    <section class="Container Container__slim">
+        {{ page.content|raw }}
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

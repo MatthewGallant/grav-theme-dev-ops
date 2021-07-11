@@ -1,0 +1,21 @@
+
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+    {% include "partials/navbar.html.twig" with { "landing": true } %}
+{% endblock %}
+
+{% block content %}
+    <section class="Container Container__slim Container__stretch">
+        <div class="Column">
+            {{ page.content|raw }}
+        </div>
+        {% for module in page.collection() %}
+            {{ module.content|raw }}
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {% include "partials/footer.html.twig" with { "landing": true } %}
+{% endblock %}

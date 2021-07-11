@@ -1,0 +1,17 @@
+
+<div class="ProfileModule">
+    <div class="ProfileModule_container">
+        <div class="ProfileModule_image">
+            <img src="{{ media[page.header.profile.photo|e].url }}" alt="{{ page.header.profile.name|e }}">
+        </div>
+        <div class="ProfileModule_name">{{ page.header.profile.name|e }}</div>
+        <div class="ProfileModule_quip">{{ page.header.profile.quip|e }}</div>
+        <div class="ProfileModule_socials">
+            {% for socialName, socialLink in page.header.profile.socials %}
+                <a href="{% if socialName == "email" %}mailto:{% endif %}{{ socialLink }}" class="ProfileModule_socialLink" target="_blank" rel="noopenner noreferrer">
+                    <img src="{{ url('theme://icons/' ~ socialName ~ '.svg')|e }}" alt="{{ socialName }}" class="ProfileModule_socialIcon">
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

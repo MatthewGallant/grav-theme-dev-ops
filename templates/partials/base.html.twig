@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ (grav.language.getActive ?: grav.config.site.default_lang)|e }}">
+    <head>
+
+        {% block head %}
+            <meta charset="utf-8" />
+            <title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            {% include 'partials/metadata.html.twig' %}
+
+            {# Add favicons to page #}
+            {{ grav.theme.config.favicon_code|regex_replace('~"\/~', '"' ~ url('theme://favicons') ~ '/')|raw }}
+
+            <link rel="canonical" href="{{ page.canonical(true)|e }}" />
+        {% endblock head %}
+
+        {% block stylesheets %}
+            {% do assets.addCss('https://unpkg.com/purecss@2.0.6/build/pure-min.css', 100) %}
+            {% do assets.addCss('https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css', 99) %}
+            {% do assets.addCss('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap', 98) %}
+            {% do assets.addCss('theme://css/custom.css', 97) %}
+            {% do assets.addCss('theme://css/lib/hamburgers.min.css', 96) %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.addJs('jquery', 100) %}
+            {% do assets.addJs('theme://js/navigation.js', 99) %}
+        {% endblock %}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
+
+    </head>
+    <body class="{{ page.header.body_classes|e }}">
+
+        {% block header %}{% endblock %}
+
+        {% block body %}
+            {% block content %}{% endblock %}
+        {% endblock %}
+
+        {% block footer %}{% endblock %}
+
+        {% block bottom %}
+            {{ assets.js('bottom')|raw }}
+        {% endblock %}
+
+    </body>
+</html>
