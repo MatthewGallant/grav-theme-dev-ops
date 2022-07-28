@@ -1,4 +1,3 @@
-
 # DevOps Theme
 
 The **DevOps** Theme is for [Grav CMS](http://github.com/getgrav/grav).
@@ -77,3 +76,7 @@ DevOps supports easily adding a custom favicon from within the administration th
 ## Installation
 
 You can install this theme like any other theme in Grav. See the default [Quark](https://github.com/getgrav/grav-theme-quark) theme for more details.
+
+## License
+
+This theme is licensed use the MIT license available [here](LICENSE).

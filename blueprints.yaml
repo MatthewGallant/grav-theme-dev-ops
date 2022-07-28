@@ -7,11 +7,11 @@ icon: code
 author:
   name: Matthew Gallant
   email: matt@matthewgallant.me
-homepage: https://github.com/MatthewGallant/grav-theme-dev-ops
+homepage: https://github.com/matthewgallant/grav-theme-dev-ops
 demo: https://matthewgallant.me
 keywords: grav, theme, etc
-bugs: https://github.com/MatthewGallant/grav-theme-dev-ops/issues
-readme: https://github.com/MatthewGallant/grav-theme-dev-ops/blob/main/README.md
+bugs: https://github.com/matthewgallant/grav-theme-dev-ops/issues
+readme: https://github.com/matthewgallant/grav-theme-dev-ops/blob/main/README.md
 license: MIT
 
 dependencies:
