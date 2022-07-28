@@ -8,6 +8,8 @@
 {% block content %}
     <section class="Container Container__slim BlogPost">
         <h1 class="BlogPost_title">{{ page.title }}</h1>
+        <div class="BlogPost_date">{{ page.date|date("m/d/Y") }}</div>
+        <div class="BlogPost_author">By {{ page.header.author|e }}</div>
         {{ page.content|raw }}
     </section>
 {% endblock %}

@@ -211,7 +211,18 @@ img {
 }
 
 .BlogPost_title {
-    text-align: center;
+    margin-bottom: 10px;
+}
+
+.BlogPost_date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.BlogPost_author {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .BlogPostCard {
@@ -223,6 +234,18 @@ img {
 
 .BlogPostCard_title {
     font-size: 2rem;
+    font-weight: 700;
+}
+
+.BlogPostCard_date {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.BlogPostCard_author {
+    margin-top: 15px;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 

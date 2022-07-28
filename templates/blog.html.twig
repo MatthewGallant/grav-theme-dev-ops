@@ -16,6 +16,8 @@
         {% for child in collection|reverse %}
             <div class="BlogPostCard">
                 <div class="BlogPostCard_title">{{ child.title }}</div>
+                <div class="BlogPostCard_date">{{ child.date|date("m/d/Y") }}</div>
+                <div class="BlogPostCard_author">By {{ child.header.author|e }}</div>
                 <div class="BlogPostCard_abstract">{{ child.summary(400)|regex_replace('/<img.*>/', '')|raw }}</div>
                 <div class="BlogPostCard_link"><a href="{{ child.route }}">Read more...</a></div>
             </div>
