@@ -368,6 +368,25 @@ img {
     color: #000000;
 }
 
+.Pills {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.Pills > div {
+    background-color: #3D5AFE;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.Pills > div:nth-child(2n) {
+    background-color: #7C4DFF;
+}
+
 /* ------------------------------------ *\
     CSS Animations
 \* ------------------------------------ */
