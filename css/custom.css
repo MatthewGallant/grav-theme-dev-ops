@@ -6,6 +6,10 @@
     Base styles for all pages
 \* ------------------------------------ */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
 }
@@ -35,7 +39,8 @@ img {
 .NavBar {
     display: flex;
     align-items: center;
-    width: 50%;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .NavBar__dark {
@@ -103,7 +108,7 @@ img {
 }
 
 .NavBar__dark .NavBarLogo_text {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .NavBar__dark ul {
@@ -112,6 +117,10 @@ img {
 }
 
 @media (max-width: 1023px) {
+    .NavBar__dark {
+	width: 100% !important;
+    }
+
     .NavBar__dark ul {
         display: flex;
         flex-direction: column;
@@ -156,8 +165,9 @@ img {
 
     .NavBar li a {
         display: block;
-        padding: 20px 0;
+        padding: 15px 0;
         width: 100%;
+        font-size: 1.3rem;
     }
     
 }
@@ -169,12 +179,6 @@ img {
 
     .NavBar_navButton {
         display: none;
-    }
-}
-
-@media (max-width: 1280px) {
-    .NavBar {
-        width: 75%;
     }
 }
 
@@ -380,9 +384,8 @@ img {
 \* ------------------------------------ */
 
 .hamburger {
-    padding-right: 50px !important;
-    display: flex !important;
-    align-items: center;
+    padding: 0 !important;
+    margin: 5px 20px 0 0 !important;
 }
 
 .hamburger-inner,
