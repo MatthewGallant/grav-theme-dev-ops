@@ -324,7 +324,7 @@ img {
 
 .Container {
     flex: 1 0 auto;
-    width: 90%;
+    margin: 0 25px;
 }
 
 .Container__slim {
